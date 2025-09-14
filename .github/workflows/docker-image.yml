@@ -28,9 +28,11 @@ jobs:
     - name: build docker image
       run: |
         docker build -t eliamvillegas/docker-graphql:0.0.2 .
+        docker build -t eliamvillegas/docker-graphql:latest .
 
     - name: push docker image
       run: |
         docker push eliamvillegas/docker-graphql:0.0.2
+        docker push eliamvillegas/docker-graphql:latest
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
